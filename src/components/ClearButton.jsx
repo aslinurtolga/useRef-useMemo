@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { memo } from "react";
 
-const ClearButton = () => {
-    return (
-        <div>ClearButton</div>
-    )
-}
+const ClearButton = memo(({ handleClear }) => {
+  console.log("Render => ClearButton componenti");
+  return (
+    <div>
+      <button className="btn btn-warning" onClick={handleClear}>
+        ClearButton
+      </button>
+    </div>
+  );
+});
 
-export default ClearButton
+export default ClearButton;
